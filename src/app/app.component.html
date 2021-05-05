@@ -1,0 +1,13 @@
+<div class="row py-3">
+  <div class="col">
+    <h1>TinyMCE Angular Integration</h1>
+    <hr>
+
+    <p *ngIf="(editorSubject | async) === null">Loading the editor...</p>
+
+    <editor id="summary-editor" name="summary" [init]="settings" (onInit)="onEditorInit($event)"></editor>
+
+    <br>
+    <button class="btn btn-primary" (click)="getText()">Get Text</button>
+  </div>
+</div>
